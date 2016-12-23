@@ -1,0 +1,11 @@
+
+welcome: "Hello.....Welcome to the loan calculator!"
+loan_amount: "Enter loan amount:"
+invalid_loan_amount: "Invalid loan amount. Enter a number above 0..."
+annual_apr: "Enter Annual Percentage Rate(APR):"
+example: "--Example..enter 5 for 5% or 2.5 for 2.5%--"
+invalid_apr: "Invalid APR. Enter a number above 0..."
+loan_years: "How many years is the loan for?"
+valid_num_of_years: "Enter a valid number of years..."
+another_calculation: "Would you like to calculate another loan?"
+thank_you: "Thank you for using the loan calculator!..Good Bye."
