@@ -1,4 +1,4 @@
-require 'pry'
+
 
 VALUES = ['2', '3', '4', '5', '6', '7', '8', '9', '10',
           'Jack', 'Queen', 'King', 'Ace'].freeze
@@ -165,9 +165,5 @@ loop do
 
 end
 prompt "Thank you for playing 21! Good Bye"
-
-
-# create method to compare and determine winner
-# refactor and consolidate repititious code into methods
 
 
