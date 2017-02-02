@@ -81,7 +81,7 @@ def calculate_winner(player_hand, dealer_hand)
     'player'
   elsif total(dealer_hand) > total(player_hand) || bust?(player_hand)
     'dealer'
-  else total(dealer_hand) == total(player_hand)
+  elsif total(dealer_hand) == total(player_hand)
     'tie'
   end
 end
@@ -104,7 +104,6 @@ loop do
   player_hand, dealer_hand = deal_cards(deck)
 
   player_total = 0
-  dealer_total = 0
 
   prompt "Welcome to a game of 21!"
   prompt "========================"
@@ -132,17 +131,13 @@ loop do
     prompt "A total of: #{player_total}"
   end
 
-  # dealer turn
-    prompt "Dealer has: #{join_with_of_dealer(dealer_hand)}"
+  prompt "Dealer has: #{join_with_of_dealer(dealer_hand)}"
   loop do
-    
     sleep(2)
-    
     if total(dealer_hand) < STAY
       prompt "Dealer chose to hit with: #{join_with_of(dealer_hand)}"
       dealer_hand << deck.pop
     end
-    
     break if bust?(dealer_hand) || total(dealer_hand) >= STAY
   end
   dealer_total = total(dealer_hand)
@@ -162,8 +157,5 @@ loop do
   prompt "Would you like to play again? (y or n)"
   answer = gets.chomp
   break unless answer.downcase.include?('y')
-
 end
 prompt "Thank you for playing 21! Good Bye"
-
-
